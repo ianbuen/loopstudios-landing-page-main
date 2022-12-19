@@ -18,7 +18,7 @@ header {
     background: url('./images/mobile/image-hero.jpg') no-repeat;
     background-size: cover;
     color: white; 
-    display: grid;
+    display: grid; 
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.2em;
     grid-template-areas: "navbar" "text";
@@ -61,7 +61,7 @@ header {
 
 /* Main Section */
 
-main {
+main { 
     text-align: center;
     text-transform: uppercase;
 }
@@ -144,4 +144,46 @@ main h1 {
     letter-spacing: .2rem;
     word-spacing: .2rem;
     width: fit-content;
+}
+
+
+/* Footer Section */
+
+footer { 
+    color: white;
+    background: black;
+    font-family: 'Alata';
+    display: grid;
+    grid-auto-flow: row;  
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer > img {
+    width: 40vw;
+    justify-self: center;
+}
+
+footer nav {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 3em;
+    padding: 2em 0 1em;
+}
+
+footer li {
+    list-style-type: none;
+    padding: .7rem;
+}
+
+footer ul>img {
+    padding: 0 .5em;
+}
+
+footer p {
+    color: hsl(0, 0%, 41%);
+}
+
+.attribution {
+    margin: 4em 0 0;
 }
