@@ -1,0 +1,52 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Mobile First */
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+header {
+    background: url('./images/mobile/image-hero.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+    display: grid;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    grid-template-areas: "navbar" "text";
+    grid-template-rows: 1fr 11fr;
+    height: 100vh;
+    padding: 0 7vw;
+}
+
+.btn-menu {
+    background: transparent url('./images/icon-hamburger.svg')
+                center right no-repeat;
+    border: none;
+}
+
+.hero-text {
+    align-self: center;
+    border: 2px solid white;
+    grid-area: text;
+    padding: 5vw 5vw 3vw;
+    position: relative;
+    text-transform: uppercase;
+    top: -5%;
+    display: flex;
+    align-items: baseline;
+}
+
+.navbar { 
+    display: grid;
+    grid-area: navbar;
+    grid-template-columns: 11fr 1fr;
+    padding: 5vh 0;
+    width: 100%;
+}
+
+.navbar nav {
+    display: none;
+}
