@@ -259,7 +259,7 @@ footer p {
     header { 
         background: url('./images/desktop/image-hero.jpg') no-repeat;
         background-size: contain; 
-        grid-template-columns: 9vw 1fr 1fr 9vw; 
+        grid-template-columns: 10vw 1fr 1fr 10vw; 
         grid-auto-flow: row;
         margin: 0;
     }
@@ -272,20 +272,20 @@ footer p {
 
     .menu {
         display: grid;
-        justify-content: end;
     }
 
     .menu ul { 
         display: grid;
-        grid-auto-flow: column;
-        column-gap: 3rem;
+        grid-auto-flow: column; 
         font-family: 'Alata';
-        font-size: 1.5em;
+        font-size: 1.3rem;
         list-style: none; 
+        justify-content: end;
     }
 
     .menu li {
         display: inline; 
+        margin-left: 2vw;
     }
 
     .btn-menu {
@@ -293,9 +293,10 @@ footer p {
     }
 
     .hero-text {
+        display: inline;
         font-size: 4em;
         grid-column: 2;
-        padding: .5em;
+        padding: .5em; 
     }
 
     .logo {
@@ -356,12 +357,15 @@ footer p {
 
 @media only screen and (min-width: 1440px) and (orientation: landscape) {
 
-    .hero-text {
-        font-size: 5rem;
+    .navbar {
+        grid-template-columns: 3fr 2fr;
     }
 
-    .about-text h1 {
-        font-size: 4rem;
+    .hero-text {
+        font-size: 7vh;
+    }
+
+    .about-text h1 { 
         grid-column: 2;
         grid-row: 2;
     }
