@@ -1,7 +1,7 @@
+/* Mobile First */
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-
-/* Mobile First */
 
 * {
     margin: 0;
@@ -20,43 +20,75 @@ header {
     color: white; 
     display: grid; 
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.2em;
-    grid-template-areas: "navbar" "text";
-    grid-template-rows: 1fr 11fr;
+    grid-template-columns: 2rem auto 2rem;
+    grid-template-rows: 2.5rem repeat(11, auto);
     height: 100vh;
     margin: 0 0 2em;
-    padding: 0 7vw;
 }
 
 .btn-menu {
     background: transparent url('./images/icon-hamburger.svg')
                 center right no-repeat;
-    border: none;
+    
+    border: none;  
+    z-index: 2;
 }
 
 .hero-text {
     align-self: center;
     border: 2px solid white;
-    grid-area: text;
+    grid-column: 2;
+    grid-row: 5 / span 2;
+    font-size: 2.5rem; 
     padding: 5vw 5vw 3vw;
     position: relative;
     text-transform: uppercase;
-    top: -5%;
     display: flex;
     align-items: baseline;
 }
 
-.navbar { 
-    display: grid;
-    grid-area: navbar;
-    grid-template-columns: 11fr 1fr;
-    padding: 5vh 0;
+.logo {
+    z-index: 2;
+    height: 1.7rem;
+}
+
+.menu-open {
+    display: grid !important;
+    grid-template-rows: repeat(12, auto);
+    grid-template-columns: 1.5rem auto 1.5rem;
+    background: black;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
+    z-index: 1;
+    animation: grow 0.2s linear;
+}
+
+.menu-open ul {
+    align-items: center;
+    display: grid;
+    grid-row: 6;
+    grid-column: 2;
+    grid-template-rows: repeat(5, 3.5rem);
+    list-style: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.navbar { 
+    align-content: start;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column: 2;
+    grid-row: 2; 
 }
 
 .navbar nav {
     display: none;
 }
+
 
 
 /* Main Section */
@@ -186,4 +218,22 @@ footer p {
 
 .attribution {
     margin: 4em 0 0;
+}
+
+/* End of Mobile Styles */
+
+
+/* Animations */
+@keyframes grow {
+    0% {
+        transform: translate(100%, -100%);
+        width: 0%;
+        height: 100%; 
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+        height: 100%;
+        width: 100%; 
+    }
 }

@@ -34,14 +34,21 @@ var data = [
 ];
 
 
-var worksList = document.querySelector('.works-list'); 
+// References
+const worksList = document.querySelector('.works-list'); 
+const mobileMenu = document.querySelector('.navbar nav');
+const btnMenu = document.querySelector('.btn-menu');
 
 
 window.onload = () => {
     worksList.append(...makeList());
-};
+
+    btnMenu.addEventListener('click', toggleMobileMenu); 
+}; 
 
 
+
+// Functions
 const makeList = () => {
     return data?.map((item) => makeListItem(item));
 };
@@ -64,4 +71,11 @@ const makeListItem = (item) => {
     div.append(img, gradient, h2);
 
     return div;
+};
+
+const toggleMobileMenu = () => {
+    
+    mobileMenu.className = "menu-open";
+
+    btnMenu.style.backgroundImage = mobileMenu.className == "menu-open" ? "url('./images/icon-close.svg')" : "url('./images/icon-hamburger.svg')";
 };
