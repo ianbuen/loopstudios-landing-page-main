@@ -67,7 +67,7 @@ window.onload = () => {
 
   btnMenu.addEventListener("click", toggleMobileMenu);
 
-  // document.querySelector('.works-list').scrollIntoView();
+  document.querySelector('.works-list').scrollIntoView();
 };
 
 // Functions

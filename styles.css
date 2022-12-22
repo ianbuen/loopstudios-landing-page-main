@@ -391,23 +391,27 @@ footer p {
         grid-column: 1 / span 2;
         grid-template-columns: repeat(4, auto);
         grid-auto-flow: row;  
-        justify-content: space-between;
+        gap: 1em
     }
 
     .list-item {
-        grid-auto-flow: column;  
+        grid-template-rows: repeat(2, auto) 10%;
+        grid-template-columns: 10% 2fr 10%;
         overflow: hidden; 
     }
 
-    .list-item .gradient {
-        grid-column: 1;
-        grid-row: 1;
+    .list-item .gradient { 
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+        background: linear-gradient(0deg, #0007 10%, transparent 100%)
     }
 
     .list-item h2 {
-        grid-column: 1; 
-        grid-row: 1; 
+        grid-column: 2;
+        grid-row: 2;
+        align-self: end; 
         padding: 0;
+        font-size: 2.5rem;
     } 
 
     .img-mobile {
@@ -415,9 +419,11 @@ footer p {
     }
 
     .img-desktop {
-        display: block;
-        grid-column: 1; 
-        grid-row: 1; 
+        display: block; 
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     } 
 }
@@ -456,11 +462,15 @@ footer p {
     }
 
     .works h1 { 
-        font-size: 5rem;
+        font-size: 4.5rem;
+    }
+
+    .list-item h2 {
+        font-size: 3.5rem;
     }
 
     .img-desktop {
-        width: 150%;
+        width: 100%;
     }
 }
 
