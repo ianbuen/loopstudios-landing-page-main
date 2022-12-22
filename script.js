@@ -66,6 +66,8 @@ window.onload = () => {
   worksList.append(...makeList());
 
   btnMenu.addEventListener("click", toggleMobileMenu);
+
+  // document.querySelector('.works-list').scrollIntoView();
 };
 
 // Functions
@@ -75,7 +77,7 @@ const makeList = () => {
 
 const makeListItem = (item) => {
   let div = document.createElement("div");
-  div.className = "list-item";
+  div.className = "list-item"; 
 
   let gradient = document.createElement("div");
   gradient.className = "gradient";
