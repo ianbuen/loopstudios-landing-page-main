@@ -153,10 +153,14 @@ main h1 {
     text-shadow: 1px 1px black;
 }
 
-.list-item img {
+.img-mobile {
     grid-column: 1 / span 12;
     grid-row: 1 / span 6;
     max-width: 100%; 
+}
+
+.img-desktop {
+    display: none;
 }
 
 .gradient {
@@ -348,10 +352,42 @@ footer p {
         grid-row: 1 / span 3;
     }
 
-    .works {
-        display: none;
+    .works { 
         grid-column: 2;
         grid-row: 2;
+        justify-content: unset;
+    }
+
+    .works-list {
+        grid-template-columns: repeat(4, auto); 
+        gap: 40px;
+    }
+
+    .list-item {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 40px repeat(2 auto);
+        background: aqua;
+    }
+
+    .list-item .gradient {
+        grid-column: 1 / span 3; 
+        grid-row: 1 / span 3;
+    }
+
+    .list-item h2 {
+        grid-column: 1 / span 2; 
+        grid-row: 3;
+        background-color: red;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-desktop {
+        display: block;
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 3; 
     }
 }
 

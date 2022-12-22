@@ -1,35 +1,59 @@
 var data = [
   {
     title: "Deep earth",
-    image: "./images/mobile/image-deep-earth.jpg",
+    images: {
+      mobile: "./images/mobile/image-deep-earth.jpg",
+      desktop: "./images/desktop/image-deep-earth.jpg"
+    },
   },
   {
     title: "Night arcade",
-    image: "./images/mobile/image-night-arcade.jpg",
+    images: {
+      mobile: "./images/mobile/image-night-arcade.jpg",
+      desktop: "./images/desktop/image-night-arcade.jpg"
+    },
   },
   {
     title: "Soccer team VR",
-    image: "./images/mobile/image-soccer-team.jpg",
+    images: {
+      mobile: "./images/mobile/image-soccer-team.jpg",
+      desktop: "./images/desktop/image-soccer-team.jpg"
+    },
   },
   {
     title: "The grid",
-    image: "./images/mobile/image-grid.jpg",
+    images: {
+      mobile: "./images/mobile/image-grid.jpg",
+      desktop: "./images/desktop/image-grid.jpg"
+    },
   },
   {
     title: "From up above VR",
-    image: "./images/mobile/image-from-above.jpg",
+    images: {
+      mobile: "./images/mobile/image-from-above.jpg",
+      desktop: "./images/desktop/image-from-above.jpg"
+    },
   },
   {
     title: "Pocket borealis",
-    image: "./images/mobile/image-pocket-borealis.jpg",
+    images: {
+      mobile: "./images/mobile/image-pocket-borealis.jpg",
+      desktop: "./images/desktop/image-pocket-borealis.jpg"
+    },
   },
   {
     title: "The curiosity",
-    image: "./images/mobile/image-curiosity.jpg",
+    images: {
+      mobile: "./images/mobile/image-curiosity.jpg",
+      desktop: "./images/desktop/image-curiosity.jpg"
+    },
   },
   {
     title: "Make it fisheye",
-    image: "./images/mobile/image-fisheye.jpg",
+    images: {
+      mobile: "./images/mobile/image-fisheye.jpg",
+      desktop: "./images/desktop/image-fisheye.jpg"
+    },
   },
 ];
 
@@ -59,11 +83,17 @@ const makeListItem = (item) => {
   let h2 = document.createElement("h2");
   h2.innerText = `${item.title}`;
 
-  let img = document.createElement("img");
-  img.src = `${item.image}`;
-  img.alt = "";
+  let imgMobile = document.createElement("img");
+  imgMobile.classList.add('img-mobile');
+  imgMobile.src = `${item.images.mobile}`;
+  imgMobile.alt = "";
 
-  div.append(img, gradient, h2);
+  let imgDesktop = document.createElement("img");
+  imgDesktop.classList.add('img-desktop');
+  imgDesktop.src = `${item.images.desktop}`;
+  imgDesktop.alt = "";
+
+  div.append(imgMobile, imgDesktop, gradient, h2);
 
   return div;
 };
